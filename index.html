@@ -7,11 +7,9 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <section>
-      <h1>
-        Charge Fast at <br />
-        your grandma's
-      </h1>
+    <section class="container" style="width: 60%">
+      <h3 class="text1">Charge Fast at</h3>
+      <h3 class="text1 second" style="width: 100%"></h3>
       <h3 style="font-size: medium; margin-top: 5%">
         Discover how Ergon enables light electric vehicles to fast-charge
         anywhere.
@@ -42,7 +40,24 @@
       </h1>
       <video src="./Video2.mp4"></video>
     </div>
+    <!-- <script>
+      const text = document.querySelector(".second");
+      const load = () => {
+        setTimeout(() => {
+          text.textContent = "your grandma's";
+        }, 3000);
+        setTimeout(() => {
+          text.textContent = "our hypercharging";
+        }, 6000);
+      };
+      load();
+      setInterval(() => {
+        load();
+      }, 6000);
+    </script> -->
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/typeit@latest/dist/typeit.min.js"></script>
+
   <script
     src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
     integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w=="

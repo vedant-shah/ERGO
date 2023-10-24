@@ -8,6 +8,16 @@ const section = document.querySelector("section");
 const end = section.querySelector("h1");
 const controller = new ScrollMagic.Controller();
 
+new TypeIt(".second", {
+  speed: 50,
+  startDelay: 1000,
+})
+  .type("our hypercharging stations.")
+  .pause(500)
+  .delete(27)
+  .type("your grandma's.")
+  .go();
+
 let scene = new ScrollMagic.Scene({
   duration: 14000,
   triggerElement: intro,
@@ -58,7 +68,14 @@ let scene5 = new ScrollMagic.Scene({
   .setClassToggle(text4, "show")
   .addTo(controller);
 
+let accel = 0.1;
+let scrollpos = 0;
+let delay = 0;
 scene.on("update", (e) => {
-  let scrollpos = e.scrollPos / 1000;
+  scrollpos = e.scrollPos / 1000;
   video.currentTime = scrollpos;
 });
+
+setInterval(() => {
+  delay += (scrollpos - delay) * accel;
+}, 41.67);
